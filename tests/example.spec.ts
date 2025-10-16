@@ -25,5 +25,5 @@ test('test', async ({ page }) => {
   await page.getByText('Select City').click();
   await page.getByText('Noida', { exact: true }).click();
   await page.getByRole('button', { name: 'Submit' }).click();
-  await expect(page.locator('#example-modal-sizes-title-lg')).toContainText('Thanks for submitting the form');
+  await expect(page.locator('#example-modal-sizes-title-lg')).toContainText('Thanksssss for submitting the form');
 });
