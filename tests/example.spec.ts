@@ -1,5 +1,7 @@
 import { test, expect } from '@playwright/test';
 
+
+
 test('test', async ({ page }) => {
   await page.goto('https://demoqa.com/automation-practice-form');
   await expect(page.locator('h1')).toContainText('Practice Form');
@@ -19,11 +21,13 @@ test('test', async ({ page }) => {
   await page.getByText('Sports').click();
   await page.getByText('Reading').click();
   await page.getByRole('textbox', { name: 'Current Address' }).click();
-  await page.getByRole('textbox', { name: 'Current Address' }).fill('San Ignacio 445566');
+  await page.getByRole('textbox', { name: 'Current Address22222' }).fill('San Ignacio 445566');
   await page.getByText('Select State').click();
   await page.getByText('NCR', { exact: true }).click();
   await page.getByText('Select City').click();
   await page.getByText('Noida', { exact: true }).click();
   await page.getByRole('button', { name: 'Submit' }).click();
-  await expect(page.locator('#example-modal-sizes-title-lg')).toContainText('Thanksssss for submitting the form');
+  await expect(page.locator('#example-modal-sizes-title-lg')).toContainText('Thanks for submitting the form');
+  //await page.screenshot({ path: "resultado-test.png", fullPage: true });
+  
 });
